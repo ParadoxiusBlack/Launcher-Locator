@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launcher Locator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Launcher Locator</h1>
+  <select id="map-select" aria-label="Map"></select>
+  <button id="add-btn">+ Add indicator</button>
+  <button id="admin-map-btn" hidden>+ Add map</button>
+</header>
+<main>
+  <aside>
+    <h2>Show</h2>
+    <div id="filters"></div>
+    <label class="filter"><input type="checkbox" id="show-custom" checked> My custom indicators</label>
+    <section id="detail" hidden>
+      <h2 id="d-title"></h2>
+      <p id="d-type" class="muted"></p>
+      <img id="d-shot" alt="Indicator screenshot" hidden>
+      <p id="d-details"></p>
+      <button id="d-delete" hidden>Delete</button>
+    </section>
+    <section id="admin" hidden>
+      <h2>Pending submissions</h2>
+      <div id="submissions"></div>
+    </section>
+  </aside>
+  <div id="map-wrap"><div id="map"><img id="map-img" alt="Map" draggable="false"></div></div>
+</main>
+
+<dialog id="indicator-dlg">
+  <form method="dialog" id="indicator-form">
+    <h2>New indicator</h2>
+    <label>Type <select name="typeId" id="f-type"></select></label>
+    <label>Title <input name="title" maxlength="200"></label>
+    <label>Details <textarea name="details" rows="3" maxlength="5000"></textarea></label>
+    <label>Screenshot <input type="file" name="file" accept="image/png,image/jpeg,image/gif,image/webp"></label>
+    <label>Save as
+      <select name="mode" id="f-mode">
+        <option value="custom">My custom indicator (private)</option>
+        <option value="submit">Submit for review</option>
+      </select>
+    </label>
+    <menu><button value="cancel" formnovalidate>Cancel</button><button id="f-save" value="ok">Save</button></menu>
+  </form>
+</dialog>
+
+<dialog id="map-dlg">
+  <form method="dialog" id="map-form">
+    <h2>New map</h2>
+    <label>Game <input name="game" required placeholder="Sniper Elite 5"></label>
+    <label>Name <input name="name" required></label>
+    <label>Slug <input name="slug" required pattern="[a-z0-9-]+"></label>
+    <label>Map screenshot <input type="file" name="file" required accept="image/png,image/jpeg,image/gif,image/webp"></label>
+    <menu><button value="cancel" formnovalidate>Cancel</button><button id="m-save" value="ok">Save</button></menu>
+  </form>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>

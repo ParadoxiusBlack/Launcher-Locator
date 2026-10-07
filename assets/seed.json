@@ -1,0 +1,12 @@
+{
+  "types": [
+    {"slug": "piat", "name": "PIAT", "color": "#e74c3c", "icon": "P"},
+    {"slug": "panzerfaust", "name": "Panzerfaust", "color": "#f39c12", "icon": "Z"},
+    {"slug": "flare-gun", "name": "Flare Gun", "color": "#2ecc71", "icon": "F"}
+  ],
+  "maps": [
+    {"slug": "se5-occupied-residence", "game": "Sniper Elite 5", "name": "Occupied Residence", "image": "maps/placeholder.svg"},
+    {"slug": "se5-spy-academy", "game": "Sniper Elite 5", "name": "Spy Academy", "image": "maps/placeholder.svg"},
+    {"slug": "ser-example-mission", "game": "Sniper Elite: Resistance", "name": "Example Mission", "image": "maps/placeholder.svg"}
+  ]
+}
