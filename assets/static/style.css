@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #161b22; color: #e6edf3; height: 100vh; display: flex; flex-direction: column; }
+header { display: flex; gap: .75rem; align-items: center; padding: .5rem 1rem; background: #0d1117; }
+header h1 { font-size: 1.1rem; margin: 0 auto 0 0; }
+button, select, input, textarea { font: inherit; }
+button { background: #238636; color: #fff; border: 0; border-radius: 4px; padding: .4rem .8rem; cursor: pointer; }
+button.active { background: #d29922; }
+main { flex: 1; display: flex; min-height: 0; }
+aside { width: 280px; padding: 1rem; overflow-y: auto; background: #0d1117; border-right: 1px solid #30363d; }
+aside h2 { font-size: .95rem; margin: .5rem 0; }
+.filter { display: flex; align-items: center; gap: .5rem; margin: .3rem 0; }
+.swatch { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.muted { color: #8b949e; }
+#detail img { max-width: 100%; border-radius: 4px; }
+#detail p { white-space: pre-wrap; }
+#map-wrap { flex: 1; overflow: auto; padding: 1rem; }
+#map { position: relative; display: inline-block; min-width: 100%; }
+#map-img { display: block; width: 100%; height: auto; user-select: none; }
+#map.adding { cursor: crosshair; }
+.marker { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; border: 2px solid #fff; color: #fff; font-size: 11px; font-weight: bold; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; }
+.marker.custom { border-style: dashed; }
+.marker.selected { outline: 3px solid #58a6ff; }
+dialog { background: #161b22; color: #e6edf3; border: 1px solid #30363d; border-radius: 8px; }
+dialog label { display: block; margin: .6rem 0; }
+dialog input, dialog select, dialog textarea { display: block; width: 100%; margin-top: .2rem; }
+dialog menu { display: flex; justify-content: flex-end; gap: .5rem; padding: 0; }
+.sub { border: 1px solid #30363d; border-radius: 4px; padding: .4rem; margin: .4rem 0; }
+.sub button { margin-right: .3rem; }
+@media (max-width: 700px) { main { flex-direction: column; } aside { width: 100%; max-height: 40vh; border-right: 0; } }
